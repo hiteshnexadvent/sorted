@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------- footer banner */
+
+.footer-banner{
+  border: 1px solid black;
+  padding: 50px 10px;
+  background-color: #391459;
+  color: #ffffff;
+  border-radius: 40px;
+}
+.footer-banner h1{
+  padding: 50px 0 0 0;
+  text-align: start;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.footer-banner p{
+  font-size: 1rem;
+  text-align: start;
+  margin-top: 20px;
+}
+
+.footer-cta {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background: white;
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  width: 270px;
+  margin-top: 50px;
+}
+
+.footer-cta img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  object-fit: cover;
+}
+
+
+.footer-cta div p:first-child {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+.footer-cta div p:last-child {
+  font-size: 0.75rem;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.footer-dot {
+  width: 8px;
+  height: 8px;
+  background: #16a34a;
+  border-radius: 50%;
+  margin-right: 0.4rem;
+
+  /* Animation for blinking */
+  animation: blink 1s infinite ease-in-out;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* --------------- foooter */
+
+.footer-main{
+  padding: 70px 20px;
+}
+.footer-main p{
+  text-align: start;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.footer-col2 ul{
+  list-style: none;
+}
+.footer-col3 ul{
+  list-style: none;
+}
+.footer-col4 img{
+  width: 40%;
+}

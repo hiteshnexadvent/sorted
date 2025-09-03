@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -------------------- navbar */
+
+.navbar-items{
+    width: auto;
+    background-color: white;
+    border-radius: 10px;
+}
+.navbar-items a{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+
+/* --------------------- main */
+
+.main-row1{
+    background-color: #f7f6f6;
+    padding-bottom: 50px;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background: #f7f6f6; /* White background */
+  padding: 20px 0;
+  position: relative;
+}
+
+/* Fading effect */
+.marquee-container::before,
+.marquee-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, #f7f6f6 70%, transparent);
+}
+
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, #f7f6f6 70%, transparent);
+}
+
+/* Marquee content */
+.marquee {
+  display: flex;
+  gap: 30px;
+  white-space: nowrap;
+  animation: marquee 4s linear infinite;
+}
+
+/* Marquee items */
+.marquee span {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #fff;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+#heading-text{
+    font-size:5rem;
+    text-align: start;
+    margin-top: 20px;
+    font-weight: 700;
+    color: #000;
+}
+#heading-para{
+    text-align: start;
+    font-size: 1.2rem;
+    padding: 0 210px 0 0;
+    margin-top: 20px;
+    font-weight: 500;
+    color: rgb(138, 135, 138);
+}
+
+/* --------------------- cta button */
+
+.main-cta {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background: white;
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  width: 270px;
+}
+
+.main-cta img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  object-fit: cover;
+}
+
+
+.main-cta div p:first-child {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+.main-cta div p:last-child {
+  font-size: 0.75rem;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.main-dot {
+  width: 8px;
+  height: 8px;
+  background: #16a34a;
+  border-radius: 50%;
+  margin-right: 0.4rem;
+
+  /* Animation for blinking */
+  animation: blink 1s infinite ease-in-out;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+
+/* -------------------------- scroll  text */
+
+.scroll-text {
+  width: 100%;
+  padding: 0 50px;
+  margin: 50px auto;
+  font-size: 28px;
+  line-height: 1.6;
+  font-weight: 500;
+  overflow-wrap: break-word; /* ensure wrapping */
+  word-break: break-word;
+}
+
+.scroll-text h4 span {
+  padding: 0;
+  font-size: 3.5rem;
+  opacity: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px black;
+  transition: all 0.4s ease;
+}
+
+.scroll-text h4 span.visible {
+  opacity: 1;
+  color: black;
+  -webkit-text-stroke: 0px black;
+}
+
+/* ------------------- circle overlay */
+
+.circle-overlay {
+  position: fixed;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  width: 300px;
+  height: 300px;
+  background: white;
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+  transition: transform 0.1s linear, opacity 0.3s ease-out;
+}
