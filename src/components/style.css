@@ -15,6 +15,9 @@
     font-size: 1.1rem;
     font-weight: 600;
 }
+.navbar-items a:hover{
+  color: #391459;
+}
 
 
 /* --------------------- main */
