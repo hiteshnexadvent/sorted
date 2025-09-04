@@ -8,13 +8,13 @@
 
 .footer-banner{
   border: 1px solid black;
-  padding: 50px 10px;
+  padding: 50px 50px;
   background-color: #391459;
   color: #ffffff;
   border-radius: 40px;
 }
 .footer-banner h1{
-  padding: 50px 0 0 0;
+  padding: 0 0 0 0;
   text-align: start;
   font-size: 3.2rem;
   font-weight: 700;
@@ -82,7 +82,7 @@
   }
 }
 
-/* --------------- foooter */
+/* --------------- footer */
 
 .footer-main{
   padding: 70px 20px;
@@ -92,12 +92,33 @@
   font-size: 1rem;
   font-weight: 500;
 }
+.footer-col1{
+  padding: 0 40px 0 40px;
+}
+.footer-col2 h5{
+  text-align: center;
+  color: #391459;
+}
 .footer-col2 ul{
   list-style: none;
+}
+.footer-col2 li{
+  padding: 10px 0px 0 35px;
+  text-align: start;
+  font-weight: 500;
+}
+.footer-col3 h5{
+  text-align: center;
+  color: #391459;
 }
 .footer-col3 ul{
   list-style: none;
 }
+.footer-col3 li{
+  padding: 10px 0px 0 35px;
+  text-align: start;
+  font-weight: 500;
+}
 .footer-col4 img{
-  width: 40%;
+  width: 50%;
 }

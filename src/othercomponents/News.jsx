@@ -39,7 +39,6 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     gap: "10px",
-    padding: "20px",
     fontFamily: "Arial, sans-serif",
   },
   form: {

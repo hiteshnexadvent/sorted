@@ -25,16 +25,19 @@ const FAQ = () => {
       </h2>
       <div className="faq-list">
         {faqData.map((item, index) => (
-          <div key={index} className="faq-item">
-            <button className="faq-question" onClick={() => toggleFAQ(index)}>
-              {item.question}
-              <span className={`faq-icon ${activeIndex === index ? "open" : ""}`}>
-                {activeIndex === index ? "−" : "+"}
-              </span>
-            </button>
-            {activeIndex === index && <div className="faq-answer">{item.answer}</div>}
-          </div>
-        ))}
+  <div key={index} className="faq-item">
+    <button className="faq-question" onClick={() => toggleFAQ(index)}>
+      {item.question}
+      <span className={`faq-icon ${activeIndex === index ? "open" : ""}`}>
+        {activeIndex === index ? "−" : "+"}
+      </span>
+    </button>
+    <div className={`faq-answer ${activeIndex === index ? "open" : ""}`}>
+      {item.answer}
+    </div>
+  </div>
+))}
+
       </div>
     </div>
   );

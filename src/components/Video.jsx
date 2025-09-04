@@ -5,8 +5,7 @@ const Video = () => {
     <div>
       <video 
         width="100%" 
-        height="auto" 
-        controls 
+        height="auto"  
         autoPlay 
         muted 
         loop

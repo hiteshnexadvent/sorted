@@ -20,7 +20,7 @@ const VerticalScrollGallery = () => {
 
   return (
     <section className="gallery-wrapper">
-      {/* Heading Section */}
+
       <div className="heading">
         <p className="sub-title">WORKS</p>
         <h1>

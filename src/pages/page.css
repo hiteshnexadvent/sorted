@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----------------------------- contact */
+
+.contact-row h1{
+    font-size: 3.5rem;
+}
+.box1{
+    padding: 30px 50px;
+    border-radius: 20px;
+    margin-top: 40px;
+    background-color: rgb(236, 236, 241);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+}
+.box1 p{
+    text-align: start;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: rgb(79, 80, 80);
+    font-weight: 500;
+}
+
+/* -------------------- work */
+
+.work{
+    margin-top: 50px;
+}
+.work-row{
+    margin-top: 20px;
+}
+.work-col p{
+    text-align: start;
+    font-weight: 600;
+    padding-top: 10px;
+}
+.work-col:hover{
+    cursor: pointer;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 import ScrollText from "./ScrollText";
 import CircularCarousel from "../sections/CircularCarousel";
@@ -8,8 +8,19 @@ import ReviewCarousel from "../sections/ReviewCarousel";
 import FAQ from "../sections/FAQ";
 import CircleOverlay from "./CircleOverlay";
 import Video from "./Video";
+import Footer from "../othercomponents/Footer";
 
 export default function Main() {
+
+  useEffect(() => {
+    // stop browser from restoring scroll
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+    // scroll to top on load
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
 
@@ -48,8 +59,6 @@ export default function Main() {
               </p>
             </div>
 
-
-
             {/* Call to action button */}
             <div className="main-cta">
               <img
@@ -74,7 +83,7 @@ export default function Main() {
         </div>
 
         <div className="row scroll-row gx-0">
-          <CircularCarousel></CircularCarousel>
+          <CircularCarousel/>
         </div>
 
         <div className="row scroll-row gx-0">
@@ -92,6 +101,8 @@ export default function Main() {
         <div className="row scroll-row gx-0">
           <FAQ/>
         </div>
+
+        <Footer/>
 
       </div>
     </div>

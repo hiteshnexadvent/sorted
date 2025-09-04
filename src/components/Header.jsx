@@ -17,10 +17,10 @@ export default function Header() {
           <a className="nav-link me-4 ms-4" href="/">Home</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link me-4" href="/">Services</a>
+          <a className="nav-link me-4" href="/work">Works</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link me-4" href="/">Testimonials</a>
+          <a className="nav-link me-4" href="/contact">Contact</a>
         </li>
         <li className="nav-item">
           <a className="nav-link me-4" href="/">Pricing</a>
@@ -31,7 +31,10 @@ export default function Header() {
       </ul>
             
         <div className="header1-button">
-          <button style={{backgroundColor:'#391459',border:'none',color:'white',padding:'10px 20px',borderRadius:'20px'}}>Book 15-min intro call</button>
+          <button className="animated-btn">
+        <span className="btn-text default-text">Book 15-min intro call</span>
+        <span className="btn-text hover-text">View Calendar</span>
+      </button>
         </div>
             
     </div>

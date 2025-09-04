@@ -16,8 +16,53 @@
     font-weight: 600;
 }
 .navbar-items a:hover{
-  color: #391459;
+  color: #fff;
+  background-color: #391459;
+  /* border-radius: 20px; */
 }
+
+.animated-btn {
+  position: relative;
+  overflow: hidden;
+  background-color: #391459;
+  border: none;
+  color: white;
+  padding: 10px 20px;     /* thoda aur width ke liye */
+  min-width: 220px;       /* force width */
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+.btn-text {
+  display: block;
+  white-space: nowrap;   /* 🚀 prevent 2 lines */
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.default-text {
+  transform: translateY(0);
+}
+
+.hover-text {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.animated-btn:hover .default-text {
+  transform: translateY(-150%);
+}
+
+.animated-btn:hover .hover-text {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 
 /* --------------------- main */
@@ -25,6 +70,7 @@
 .main-row1{
     background-color: #f7f6f6;
     padding-bottom: 50px;
+    padding-top: 20px;
 }
 
 .marquee-container {
@@ -69,11 +115,11 @@
 .marquee span {
   display: inline-block;
   padding: 8px 20px;
-  background: #fff;
+  background: #391459;
   border-radius: 50px;
   font-weight: 600;
   font-size: 16px;
-  color: #000;
+  color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -89,17 +135,17 @@
 
 
 #heading-text{
-    font-size:5rem;
-    text-align: start;
-    margin-top: 20px;
+    font-size:4.2rem;
+    /* text-align: start; */
+    margin-top: 30px;
     font-weight: 700;
     color: #000;
 }
 #heading-para{
-    text-align: start;
+    /* text-align: start; */
     font-size: 1.2rem;
     padding: 0 210px 0 0;
-    margin-top: 20px;
+    margin-top: 30px;
     font-weight: 500;
     color: rgb(138, 135, 138);
 }
@@ -116,6 +162,8 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
   width: 270px;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 .main-cta img {
@@ -172,7 +220,7 @@
   font-size: 28px;
   line-height: 1.6;
   font-weight: 500;
-  overflow-wrap: break-word; /* ensure wrapping */
+  overflow-wrap: break-word; 
   word-break: break-word;
 }
 

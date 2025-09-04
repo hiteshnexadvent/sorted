@@ -4,27 +4,67 @@ import "./style.css";
 const CircleOverlay = () => {
   const [scale, setScale] = useState(0);
   const [opacity, setOpacity] = useState(1);
+  const [progress, setProgress] = useState(0);
+  const [locked, setLocked] = useState(false);
 
+  // 👇 Top pe aane par reset
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-
-      // Hero section height
-      const heroHeight = window.innerHeight;
-      const progress = Math.min(scrollTop / heroHeight, 1);
-
-      // scale 0 → 10
-      const newScale = progress * 10;
-      setScale(newScale);
-
-      // 🔥 Fix: White full until progress = 1, then suddenly hide
-      const newOpacity = progress < 1 ? 1 : 0;
-      setOpacity(newOpacity);
+    const checkTop = () => {
+      if (window.scrollY === 0) {
+        setLocked(true);
+        setProgress(0);
+        setScale(0);
+        setOpacity(1);
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", checkTop);
+    checkTop();
+
+    return () => window.removeEventListener("scroll", checkTop);
   }, []);
+
+  // 👇 Wheel se animation
+  useEffect(() => {
+    if (!locked) return;
+
+    const handleWheel = (e) => {
+      e.preventDefault();
+      const step = 0.1;
+      const delta = e.deltaY > 0 ? step : -step;
+
+      setProgress((prev) => {
+        let next = Math.min(Math.max(prev + delta, 0), 1);
+        return next;
+      });
+    };
+
+    window.addEventListener("wheel", handleWheel, { passive: false });
+    return () => window.removeEventListener("wheel", handleWheel);
+  }, [locked]);
+
+  // 👇 Animation handling
+  useEffect(() => {
+    if (locked) {
+      setScale(progress * 10);
+      setOpacity(progress < 1 ? 1 : 0);
+
+      if (progress === 1) {
+        const heroHeight = window.innerHeight;
+        window.scrollTo({
+          top: heroHeight,
+          behavior: "smooth",
+        });
+
+        // ✅ Ab overlay band kar do taaki normal scroll enable ho
+        setTimeout(() => {
+          setLocked(false);
+        }, 600); // smooth scroll complete hone ka thoda wait
+      }
+    }
+  }, [progress, locked]);
+
+  if (!locked) return null;
 
   return (
     <div

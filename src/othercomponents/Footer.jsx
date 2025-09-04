@@ -33,7 +33,8 @@ export default function Footer() {
 
       <div className="container-fluid">
         <div className="row footer-main">
-          <div className="col-lg-4">
+          <div className="col-lg-4 footer-col1">
+            <img src="/images/logo.png" alt="" style={{height:'80px',display:'flex'}}/>
             <p>Made remotedly with 💜 and passion</p>
             <p>-Westhill Studio</p>
             <News/>
@@ -42,20 +43,20 @@ export default function Footer() {
             <h5>Pages</h5>
             <ul>
               <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
+              <li>Contact</li>
+              <li>About</li>
+              <li>Privacy</li>
+              <li>Testimonials</li>
             </ul>
           </div>
           <div className="col-lg-2 footer-col3">
             <h5>Social</h5>
             <ul>
               <li>Instagram</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
+              <li>Facebook</li>
+              <li>Snapchat</li>
+              <li>Twitter</li>
+              <li>Skype</li>
             </ul>
           </div>
           <div className="col-lg-4 footer-col4">
