@@ -13,11 +13,9 @@ import Footer from "../othercomponents/Footer";
 export default function Main() {
 
   useEffect(() => {
-    // stop browser from restoring scroll
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
     }
-    // scroll to top on load
     window.scrollTo(0, 0);
   }, []);
 
@@ -27,8 +25,8 @@ export default function Main() {
       <CircleOverlay/>
       <div className="container-fluid gx-0">
         <div className="row main-row1 gx-0">
-          <div className="col-lg-3"></div>
-          <div className="col-lg-6">
+          <div className="col-lg-3 col-12"></div>
+          <div className="col-lg-6 col-12">
             <div className="marquee-container">
               <div className="marquee">
                 <span>Branding</span>

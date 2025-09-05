@@ -175,3 +175,25 @@
   opacity: 1;
   padding: 15px 20px; /* open hone par normal padding */
 }
+
+
+/* ----------------------responsive for mobile */
+
+@media (max-width: 768px) {
+
+  /* ---- review */
+  
+  .reviews-container h1{
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #111;
+  padding: 0 30px;
+  }
+
+  .faq-title h1{
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+}

@@ -26,7 +26,6 @@ const CircularCarousel = () => {
           <em>better</em> design, faster.
         </p>
 
-        {/* CTA */}
         <div className="cta">
           <img
             src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=40&h=40&fit=crop"

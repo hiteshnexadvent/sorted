@@ -32,38 +32,39 @@ export default function Footer() {
       {/* ------------------------- footer main */}
 
       <div className="container-fluid">
-        <div className="row footer-main">
-          <div className="col-lg-4 footer-col1">
-            <img src="/images/logo.png" alt="" style={{height:'80px',display:'flex'}}/>
-            <p>Made remotedly with 💜 and passion</p>
-            <p>-Westhill Studio</p>
-            <News/>
-          </div>
-          <div className="col-lg-2 footer-col2">
-            <h5>Pages</h5>
-            <ul>
-              <li>Home</li>
-              <li>Contact</li>
-              <li>About</li>
-              <li>Privacy</li>
-              <li>Testimonials</li>
-            </ul>
-          </div>
-          <div className="col-lg-2 footer-col3">
-            <h5>Social</h5>
-            <ul>
-              <li>Instagram</li>
-              <li>Facebook</li>
-              <li>Snapchat</li>
-              <li>Twitter</li>
-              <li>Skype</li>
-            </ul>
-          </div>
-          <div className="col-lg-4 footer-col4">
-            <img src="/images/s1.avif" alt="" />
-          </div>
-        </div>
-      </div>
+  <div className="row footer-main">
+    <div className="col-lg-4 col-md-4 col-12 footer-about">
+      <img src="/images/logo.png" alt="" style={{ height: "80px", display: "flex" }} />
+      <p>Made remotely with 💜 and passion</p>
+      <p>-Westhill Studio</p>
+      <News />
+    </div>
+    <div className="col-lg-2 col-md-4 col-6 footer-pages">
+      <h5>Pages</h5>
+      <ul>
+        <li>Home</li>
+        <li>Contact</li>
+        <li>About</li>
+        <li>Privacy</li>
+        <li>Testimonials</li>
+      </ul>
+    </div>
+    <div className="col-lg-2 col-md-4 col-6 footer-social">
+      <h5>Social</h5>
+      <ul>
+        <li>Instagram</li>
+        <li>Facebook</li>
+        <li>Snapchat</li>
+        <li>Twitter</li>
+        <li>Skype</li>
+      </ul>
+    </div>
+    <div className="col-lg-4 col-md-4 col-12 footer-image">
+      <img src="/images/s1.avif" alt="" />
+    </div>
+  </div>
+</div>
+
 
     </div>
   )

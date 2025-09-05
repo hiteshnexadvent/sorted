@@ -29,15 +29,19 @@ const CircleOverlay = () => {
     if (!locked) return;
 
     const handleWheel = (e) => {
-      e.preventDefault();
-      const step = 0.1;
-      const delta = e.deltaY > 0 ? step : -step;
+  e.preventDefault();
 
-      setProgress((prev) => {
-        let next = Math.min(Math.max(prev + delta, 0), 1);
-        return next;
-      });
-    };
+  // 🔥 Normalize deltaY (trackpad aur mouse dono ke liye)
+  let delta = Math.sign(e.deltaY); // sirf -1 ya +1 milega
+  const step = 0.03; // jitna chhota, utna slow (try 0.02 bhi kar sakte ho)
+
+  setProgress((prev) => {
+    let next = Math.min(Math.max(prev + delta * step, 0), 1);
+    return next;
+  });
+};
+
+
 
     window.addEventListener("wheel", handleWheel, { passive: false });
     return () => window.removeEventListener("wheel", handleWheel);
@@ -59,7 +63,7 @@ const CircleOverlay = () => {
         // ✅ Ab overlay band kar do taaki normal scroll enable ho
         setTimeout(() => {
           setLocked(false);
-        }, 600); // smooth scroll complete hone ka thoda wait
+        }, 900); // smooth scroll complete hone ka thoda wait
       }
     }
   }, [progress, locked]);

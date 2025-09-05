@@ -4,10 +4,29 @@
   box-sizing: border-box;
 }
 
+/* -------------------- work */
+
+.work{
+    margin-top: 50px;
+}
+.work-row{
+    margin-top: 20px;
+}
+.work-col p{
+    text-align: start;
+    font-weight: 600;
+    padding-top: 10px;
+}
+.work-col:hover{
+    cursor: pointer;
+}
+
+
 /* ----------------------------- contact */
 
 .contact-row h1{
     font-size: 3.5rem;
+    margin-top: 40px;
 }
 .box1{
     padding: 30px 50px;
@@ -24,19 +43,31 @@
     font-weight: 500;
 }
 
-/* -------------------- work */
 
-.work{
+/* ----- contact idea */
+
+.contact-idea{
     margin-top: 50px;
+    margin-left: 20px;
 }
-.work-row{
+.contact-idea h1{
+    text-align: start;
+}
+
+.contact-idea p{
+    text-align: start;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(102, 102, 102);
     margin-top: 20px;
 }
-.work-col p{
-    text-align: start;
-    font-weight: 600;
-    padding-top: 10px;
-}
-.work-col:hover{
-    cursor: pointer;
+.contact-idea button{
+    display: flex;
+    justify-content: start;
+    margin-top: 20px;
+    border: none;
+    background-color: #391459;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 40px;
 }

@@ -10,6 +10,7 @@ const OverlappingCards = () => {
       <div className="card card1">
         <div>
           <img
+            // className="overlap img-fluid"
             src="/images/o1.avif"
             alt=""
             style={{ height: "400px", width: "400px",borderRadius:'20px' }}
@@ -22,7 +23,7 @@ const OverlappingCards = () => {
             From logo to typography to colors, we craft a system that’s
             distinct, aligned, and built to grow with your business.
                   </p>
-                  <div style={{marginTop:'100px'}}>
+                  <div className="overlap-btn" style={{marginTop:'100px'}}>
                   <button className="tag-btn"><span className="icon">✔</span>Brand GuideLine</button>
                   <button className="tag-btn"><span className="icon">✔</span>Responsive</button>
                   <button className="tag-btn"><span className="icon">✔</span>Optimization</button>
@@ -35,6 +36,7 @@ const OverlappingCards = () => {
       <div className="card card2">
         <div>
           <img
+          // className="overlap img-fluid"
             src="/images/o2.avif"
             alt=""
             style={{ height: "400px", width: "400px",borderRadius:'20px' }}
@@ -48,7 +50,7 @@ const OverlappingCards = () => {
             distinct, aligned, and built to grow with your business.
                   </p>
 
-                  <div style={{marginTop:'100px'}}>
+                  <div className="overlap-btn" style={{marginTop:'100px'}}>
                   <button className="tag-btn"><span className="icon">✔</span>Brand GuideLine</button>
                   <button className="tag-btn"><span className="icon">✔</span>Responsive</button>
                   <button className="tag-btn"><span className="icon">✔</span>Optimization</button>
@@ -62,6 +64,7 @@ const OverlappingCards = () => {
       <div className="card card3">
         <div>
           <img
+          // className="overlap img-fluid"
             src="/images/o3.avif"
             alt=""
             style={{ height: "400px", width: "400px",borderRadius:'20px' }}
@@ -74,7 +77,7 @@ const OverlappingCards = () => {
             From logo to typography to colors, we craft a system that’s
             distinct, aligned, and built to grow with your business.
                   </p>
-                  <div style={{marginTop:'100px'}}>
+                  <div className="overlap-btn" style={{marginTop:'100px'}}>
                   <button className="tag-btn"><span className="icon">✔</span>Brand GuideLine</button>
                   <button className="tag-btn"><span className="icon">✔</span>Responsive</button>
                   <button className="tag-btn"><span className="icon">✔</span>Optimization</button>
